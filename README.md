@@ -28,3 +28,6 @@ class Solution {
     }
 }
 ```
+
+# References :
+https://leetcode.com/articles/pascals-triangle

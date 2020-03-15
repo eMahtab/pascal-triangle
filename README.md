@@ -9,19 +9,12 @@ class Solution {
         List<List<Integer>> result = new ArrayList<>();
         if(numRows < 1)
             return result;
-        if(numRows >= 1) {
-            List<Integer> firstRow = new ArrayList<>();
-            firstRow.add(1);
-            result.add(firstRow);
-        }
-        if(numRows >= 2) {
-            List<Integer> secondRow = new ArrayList<>();
-            secondRow.add(1); secondRow.add(1);
-            result.add(secondRow);
-        }
         
-        for(int i = 3; i <= numRows; i++) {
-            List<Integer> previousRow = result.get(i-2);
+        result.add(new ArrayList<>());
+        result.get(0).add(1);
+            
+        for(int i = 1; i < numRows; i++) {
+            List<Integer> previousRow = result.get(i-1);
             List<Integer> nextRow = new ArrayList<>();
             nextRow.add(1);
             for(int j = 0; j < previousRow.size() - 1; j++) {
